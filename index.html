@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+  body{
+    padding: 0;
+    margin: 0;
+  }
+  
+  @font-face {
+    font-family: tesla;
+    src: url(tesla.ttf);
+  }
+  
+  .h1{
+    font-family: 'tesla';
+    color: #eb2127;
+    text-align: center;
+    font-size: 55px;
+    padding-top: 25vh;
+    padding-bottom: 5vh;
+    animation:appear 2s linear;
+    position: relative;
+  }
+  
+  .img{
+    background: url('bg.jpg') rgba(0,0,0,0.5);
+    background-size: cover;
+    height: 100vh;  
+    animation:flash 2s linear;
+  }
+  
+  .truck{
+    position: absolute;
+    left: calc((100% - 627px) / 2);
+    animation:appear 2s linear;
+  }
+  
+  .wheel1{
+    position: absolute;
+    left: 10%;
+    top: 53%;
+    animation:spin 3s linear infinite;
+  }
+  
+  .wheel2{
+    position: absolute;
+    left: 69%;
+    top: 53%;
+    animation:spin 3s linear infinite;
+  }
+  
+  
+  @-webkit-keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(-360deg);}
+  }
+  
+  @-webkit-keyframes flash {
+    0% {background: url(bg.jpg);}
+    3% {background: #fff;}
+    6% {background: url(bg.jpg);}
+    9% {background: #fff;}
+    15% {background: url(bg.jpg);}
+    20% {background: #fff;}
+  }
+  
+  @-webkit-keyframes appear {
+    0%{opacity: 0;}
+    75%{opacity: 0;}
+    100%{opacity: 1;}
+  }
+</style>
+</head>
+<body>
+
+<div class="img">
+  <div class="h1">Tesla Cyber Truck</div>
+  <div class="truck">
+    <img src="truck.png" />
+    <img class="wheel1" src="wheel.png" />
+    <img class="wheel2" src="wheel.png" />
+  </div>
+</div>
+
+</body>
+</html>
